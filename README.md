@@ -1,3 +1,3 @@
 # REACTJS
 
-## Patika dev React kursunda yaptığım pratikler
+## Patika dev React kursunda yaptığım pratikler.
