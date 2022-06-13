@@ -15,6 +15,5 @@ function App() {
 }
 
 export default App;
-//inline css vermeyi öğrendim
-//Bootstrap dail etme
-//style.module.css kavramı
+//Bootstrap dail etme tamamlandı
+//style.module.css kavramı öğrenilmiş oldu
