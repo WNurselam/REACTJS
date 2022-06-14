@@ -29,6 +29,15 @@ function Layout() {
               Blog
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              style={({ isActive }) => ({ color: isActive ? "red" : "pink" })}
+              to="/users"
+            >
+              Users
+            </NavLink>
+          </li>
+          
         </ul>
       </nav> 
       <Outlet /> {/*Nav link'in her sayfa da olması için */}

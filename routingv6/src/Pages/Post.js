@@ -1,10 +1,11 @@
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom' // params'ı import etme
 
 function Post() {
-    const params = useParams();
+    const params = useParams();  // postId 'den gönderdiğimiz id yi params ile aldık
   return (
     <div>
-        <h1>Post {params.postId}</h1> {/*postId buradan aldık */}
+       <h1>Posts</h1>
+        <h2>Post {params.postId}</h2> {/*postId buradan aldık */}
     </div>
   )
 }
