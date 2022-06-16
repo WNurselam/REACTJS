@@ -7,6 +7,7 @@ import Blog from "./Pages/Blog";
 import Post from "./Pages/Post";
 import User from "./Pages/User";
 import Users from "./Pages/Users";
+import BlogPageNotFound from './Pages/BlogPageNotFound'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           {/*------------------------- */}
           <Route path="users" element={<Users/>}></Route>
           <Route path="user/:userId" element={<User/>}></Route>
+          <Route path="*" element={<BlogPageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
