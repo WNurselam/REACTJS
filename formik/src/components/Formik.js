@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import validationSchema from "./Validations";
 
 function Formik() {
-  const { handleSubmit, handleChange, values } = useFormik({
+  const { handleSubmit, handleChange,values,errors,handleBlur,touched } = useFormik({
     initialValues: {
       email: "",
       password: "",
@@ -26,17 +26,34 @@ function Formik() {
           placeholder="jane@acme.com"
           type="email"
           value={values.email}
+          onBlur={handleBlur}
         />
+
+        {errors.email && touched.email &&( <div className="errors">{errors.email}</div>)} {/* email varsa uyarı mesajı*/ }
         <br />
         <br />
 
         <label htmlFor="password">Password : </label>
-        <input name="password" onChange={handleChange} type="password" value={values.password} />
+        <input name="password"
+         onChange={handleChange}
+          type="password" 
+          value={values.password} 
+          onBlur={handleBlur}
+          />
+        {errors.password && touched.password &&( <div className="errors">{errors.password}</div>)}
+
         <br />
         <br />
 
         <label htmlFor="passwordConfirm">Password Confirm : </label>
-        <input name="passwordConfirm" onChange={handleChange} type="password" value={values.passwordConfirm} />
+        <input name="passwordConfirm" 
+        onChange={handleChange}
+         type="password" 
+         value={values.passwordConfirm}
+         onBlur={handleBlur}
+          />
+
+        {errors.passwordConfirm && touched.passwordConfirm &&(<div className="errors">{errors.passwordConfirm}</div>)}
         <br />
         <br />
 
@@ -49,3 +66,15 @@ function Formik() {
 }
 
 export default Formik;
+
+/* 
+handleBlur: İnputtan ayrıldığı anda
+
+values: İnput değerleri
+
+error: Hata mesajlarını yakalayabilmek için
+
+touched: İnput'a daha önce focus olmuşsa 
+
+
+*/

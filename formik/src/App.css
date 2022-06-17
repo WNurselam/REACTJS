@@ -9,6 +9,10 @@ input{
   width: 300px;
   border-radius: 4px;
 }
+
+.errors{
+  color:red
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
