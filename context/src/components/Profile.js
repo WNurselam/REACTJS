@@ -1,7 +1,7 @@
 import {useContext,useState} from 'react' 
 
 import UserContext from '../context/UserContext' // UserContext'i burada kulanacağız
-import Button from './Button'
+
 
 function Profile() {
     const {user,setUser} = useContext(UserContext)

@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect,useContext} from "react";
 
 const ThemeContext = createContext(); // Contexti oluşturduk
 
@@ -18,10 +18,19 @@ export const ThemeProvider = ({ children }) => {
 
   
   return (
-    <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider> 
+    //children demek component'in içindeki tüm componentleri buraya yerleştir. 
   );
 };
 
-export default ThemeContext;
+export const useTheme = () => useContext(ThemeContext);
 
-// Burada context kullanıp dışarı aktardık
+/*  Burada hem context'i oluştup hemde kullanmış oldu diğer componentlarda daha rahat kullanmak için yani diğer
+componentlarda sadec import ederek kullabiliriz 
+
+Context API, React çekirdeği içinde bulunan ve global state'i yönetmemizi sağlayan bir araçtır
+*/
+
+
+
+

@@ -1,9 +1,7 @@
-import { useContext } from "react"; // context'i kullanırken
-
-import ThemeContext from "../context/ThemeContext";  // context'in kendisi
+import {useTheme} from "../context/ThemeContext";  // context'in kendisi
 
 function Button() {
-  const {theme,setTheme} = useContext(ThemeContext); //Theme context verisine erişir.
+  const {theme,setTheme} = useTheme(); //Theme context verisine erişir.
   
 
   return( 
